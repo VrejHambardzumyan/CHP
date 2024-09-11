@@ -1,5 +1,4 @@
 #include <iostream.h>
-
 using namespace std;
 
 int yndhanurBajanarar(int a, int b)
@@ -17,17 +16,14 @@ int yndhanurBajanarar(int a, int b)
         {
             a = a - b;
         }
-
     }
-    cout>>"the number is\n"
+    cout>>"The number is\n"
     cout>>a;
-    
 }
-
-
 
 int main()
 {
-    yndhanurBajanarar(64,)
-
+   int A = -6;
+   int B = -9;
+   yndhanurBajanarar(A , B);
 }
