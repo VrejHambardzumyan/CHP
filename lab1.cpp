@@ -4,8 +4,9 @@ using namespace std;
 
 int yndhanurBajanarar(int a, int b)
 {
+   a = abs(a);
+   b = abs(b);
    
-
     while (a != b)
     {
        while (a < b)
