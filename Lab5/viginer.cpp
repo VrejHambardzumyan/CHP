@@ -3,9 +3,6 @@
 using namespace std;
 
 class VigenereCipher {
-private:
-    const char* Alphabet = "abcdefghijklmnopqrstuvwxyz";
-
 public:
     void encode(const char str[], const char key[], char encoded[]) {
         int strLen = strlen(str);
@@ -32,6 +29,7 @@ public:
     }
 
 private:
+    const char* Alphabet = "abcdefghijklmnopqrstuvwxyz";
     int findIndex(char c) {
         for (int j = 0; j < 26; j++) {
             if (c == Alphabet[j]) {
