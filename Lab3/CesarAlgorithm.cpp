@@ -6,9 +6,9 @@ class CaesarCipher
 {
 private:
      
-    static const int ASCII_START = 32;  
-    static const int ASCII_END = 126; 
-    static const int ASCII_RANGE = ASCII_END - ASCII_START + 1;
+    static const int ASCII_START = 0;  
+    static const int ASCII_END = 255; 
+    static const int ASCII_RANGE = 256;
 
     
     int normalizeShift(int shift) {
@@ -24,7 +24,7 @@ public:
         {
             if (c >= ASCII_START && c <= ASCII_END) 
             {
-                char encodedChar = ASCII_START + (c - ASCII_START + normalizedShift) % ASCII_RANGE;
+                char encodedChar = (c + normalizedShift) % ASCII_RANGE;
                 encodedText += encodedChar;
             } else {
                 encodedText += c;
@@ -43,7 +43,7 @@ public:
         {
             if (c >= ASCII_START && c <= ASCII_END) 
             {
-                char decodedChar = ASCII_START + (c - ASCII_START - normalizedShift + ASCII_RANGE) % ASCII_RANGE;
+                char decodedChar =(c - normalizedShift + ASCII_RANGE) % ASCII_RANGE;
                 decodedText += decodedChar;
             } else {
                 decodedText += c;
@@ -57,8 +57,8 @@ public:
 int main() {
     CaesarCipher cipher;
 
-    string text = "hello, World! 123";
-    int shift = 1;
+    string text = "!";
+    int shift = 230;
 
     string encoded = cipher.encode(text, shift);
     cout << "Encoded: " << encoded << endl;
