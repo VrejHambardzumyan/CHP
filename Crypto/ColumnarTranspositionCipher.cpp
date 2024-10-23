@@ -1,5 +1,5 @@
 #include "ColumnarTranspositionCipher.h"
-#include <stdexcept>
+
 
 std::string ColumnarTranspositionCipher::encode(const std::string &text,int key) {
   
