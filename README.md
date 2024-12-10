@@ -1,2 +1,2 @@
-# Labarator
+# Laborator
 Vrej Hambardzumyan
